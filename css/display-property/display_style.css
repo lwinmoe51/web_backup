@@ -1,0 +1,59 @@
+.division{
+    width:110px;
+    height: 110px;
+    border: 1px solid purple;
+    /*div is orginally block level element. But we changed block level to inline level elements here*/
+    display: inline;
+    /*above width and height value won't effect bcoz they changed to inline level elements*/
+    
+}
+/*inline elements (here is span) can't style width and height*/
+/*so we will use display property to change inline to block elements*/
+
+.span_{
+    display: block;
+    width:110px;
+    height: 110px;
+    border: 1px solid purple;
+}
+
+#red{
+    background-color: red;
+}
+
+#gray{
+    background-color: gray;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+    background-color: green;
+}
+
+.dis_none{
+    display:none;
+}
+
+/*if u want to style inline level elements (width and height) without changing to block level element,use display:inline-block*/
+
+.span1,.span2{
+    display: inline-block;
+    width:110px;
+    height: 110px;
+    border: 1px solid purple;
+}
+
+.vis_hidden{
+    visibility: hidden;
+}

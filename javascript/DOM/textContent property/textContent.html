@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+</head>
+
+<body>
+    <div id="note">
+        Javascript textContent Demo!
+        <span style="display:none">Hidden Text!</span>
+        <!-- comment -->
+    </div>
+
+    <div id="note2">
+        Javascript textContent Demo 2!
+        <span style="display:none">Hidden Text 2!</span>
+    </div>
+
+    <script>
+        // getting text from a element or it's descendants
+        let note = document.getElementById('note');
+        alert(note.textContent);
+        // output => will be every child content , even content - i don't get in pratical
+        // Javascript textContent Demo!
+        // Hidden Text!
+        //note - textContent don't account css styel
+
+        alert(note.innerText);
+        // output
+        // Javascript textContent Demo!
+        // note - innerText account the css style
+
+        //========================================
+
+        //setting textContent for a node
+        let note2 = document.getElementById('note2');
+        note2.textContent = "this is a new note2";
+        //Note - when you set textContent on a node, all the node's children will be removed and replaced by a single text node with a newText which is added
+
+        summary
+        => use the textContent property to return the concatenation of the textContent of every child node. U can use it to set a text for a node.
+
+        => the innerText returns the human-readable text that take CSS into account.
+    </script>
+</body>
+
+</html>

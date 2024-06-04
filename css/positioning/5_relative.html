@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:fixed</title>
+
+    <style>
+        body{
+            width: 2000px;
+            height: 20000px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .normal{
+            background-color: green;
+        }
+        .relative{
+            background-color: yellow;
+            position: relative;
+            right: 10px;
+            top: 0;
+        }
+        .normal2{
+            background-color: red;
+        }
+
+        .parent{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+
+        .child{
+            background-color: purple;
+            position: relative;
+            left: 100px ;
+            top: 0;
+        }
+
+        .ab-parent{
+            background-color: chocolate;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+
+        .rel-child{
+            background-color: darkgrey;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+
+        .normal3{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="normal">
+        normal
+    </div>
+    <div class="relative">
+        relative
+    </div>
+    <div class="normal2">
+        normal2
+    </div>
+
+    <div class="parent">
+        <div class="child">
+            child
+        </div>
+    </div>
+
+    <div class="ab-parent">
+        ab-parent
+        <div class="rel-child">
+            rel-child
+        </div>
+    </div>
+
+    <div class="normal3">
+        normal3
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+div{
+    width: 100px;
+    height: 50px;
+    border: 2px gray solid;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.black{
+    background-color: black;
+}
+
+.yellow_f{
+    background-color: yellow;
+    float: left;
+}
+
+.green_f{
+    background-color: green;
+    float: right;
+}
+
+.red_f{
+    background-color: red;
+    float: left;
+}
+
+.black_f{
+    background-color: black;
+    margin-top: 70px;
+    color: white;
+    float: none;
+}

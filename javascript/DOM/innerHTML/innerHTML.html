@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+<body>
+    <!-- example1 -->
+    <ul id="menu">
+        <li>Home</li>
+        <li>Services</li>
+    </ul>
+
+    <!-- example2 -->
+    <ul id="menu2">
+        <li>Home 2</li>
+        <li>Services 2</li>
+    </ul>
+
+    <!-- example 3 -->
+    <div id="main"></div>
+    <script src="app.js"></script>
+
+    <script>
+        //example 1 
+        //simple innerHTML example
+        //getting html from ul element
+        let menu = document.getElementById('menu');
+        alert(menu.innerHTML);
+        //===================================
+
+        //example 2
+        //Examining the current HTML souce
+        let menu2 = document.getElementById('menu2');
+        //creat new li element
+        let li = document.createElement('li');
+        li.textContent = "About Us 2";
+        //add it to the ul element
+        menu2.appendChild(li);
+
+        alert(menu2.innerHTML);
+
+        // summary
+        // => use innerHTML property of an element to get or set HTML contained within the element
+        // => the innerHTML property returns the current HTML source of the element, including any change that has been made since the page was loaded
+        // => Do not use innerHTML to set contents that you have no control to avoid a security risk
+
+    </script>
+
+        
+</body>
+</html>

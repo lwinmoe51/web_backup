@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+
+    <style>
+        #first-line::first-line{
+            color: red;
+        }
+
+        #first-letter::first-letter{
+            color: red;
+        }
+
+        #selection::selection{
+            background: pink;
+        }
+
+        #before::before{
+            content:url(bullet.jpg);
+        }
+
+        #after::after{
+            content:url(bullet.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h1>::first-line</h1>
+    <p id="first-line">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque corporis facere doloribus magnam labore maiores quisquam ea voluptatem, sunt distinctio iste minus consequuntur eum excepturi reiciendis ratione quasi, libero accusantium.</p>
+
+    <h1>::first-letter</h1>
+    <h4 id="first-letter">First letter of heading</h4>
+
+    <h1>::selection</h1>
+    <p id="selection">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nihil nostrum animi veritatis ratione eos similique excepturi iusto omnis obcaecati tempora officiis sed, dolorum ut perspiciatis corporis soluta quibusdam ipsa.</p>
+
+    <h1>::before</h1>
+    <p id="before">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+    <p id="before">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+    <p id="before">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+
+    <h1>::after</h1>
+    <p id="after">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+    <p id="after">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+    <p id="after">You can insert text, images and other resources using <strong>:before</strong> pseudo element </p>
+</body>
+</html>

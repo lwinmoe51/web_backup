@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+
+    <style>
+        .link1:link{
+            text-decoration: none;
+        }
+
+        .link2:visited{
+            color:green;
+        }
+
+        .link3:hover{
+            color: red;
+        }
+
+        .link4:active{
+            color:yellow;
+        }
+
+        img:hover{
+            width: 250px;
+            height: 250px;
+        }
+
+        ul li:first-child{
+            font-weight: bold;
+        }
+
+        ul li:last-child{
+            font-style: italic;
+        }
+
+        ul li:nth-child(3){
+            color: red;
+        }
+
+        ul li:nth-child(2n){
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>:link</h1>
+    <p>
+        <a href="http://www.google.com" class="link1">
+        This link is just normal unvisited link without default underline.
+        </a>
+    </p>
+
+    <h1>:visited</h1>
+    <p>
+        <a href="http://www.sololearn.com" class="link2">
+            This link is visited link that is marked with green color.
+        </a>
+    </p>
+
+    <h1>:hover</h1>
+    <p>
+        <a href="http://www.facebook.com" class="link3">
+            This link is hovered when we mouse over it turn red.
+        </a>
+    </p>
+
+    <h1>:active</h1>
+    <p>
+        <a href="http://www.github.com" class="link4">
+            This link will change color yellow when click and active(just a moment).
+        </a>
+    </p>
+
+    <h1>Image will large when hover</h1>
+    <img src="lm_makerFest.jpg" alt="" width="200px" height="200px">
+
+    <h1>list for :first-child,:last-child,:nth-child</h1>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+        <li>Fifth item</li>
+    </ul>
+</body>
+</html>

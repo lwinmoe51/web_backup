@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            background-color: #9ACD32;
+            margin-bottom: 50px;
+        }
+
+        .box1{
+            box-shadow: 10px 10px #888888;
+        }
+
+        .box2{
+            box-shadow: 10px 10px 10px 5px #888888;
+        }
+
+        .box3{
+            box-shadow: -10px -10px 5px -5px #888888;
+        }
+
+        .box4{
+            box-shadow: 10px 10px 10px #888888;
+        }
+
+        .box5{
+            box-shadow: 10px 10px;
+        }
+
+        .box6{
+            box-shadow: inset 10px 10px 5px #888888;
+        }
+
+        .box7{
+            box-shadow: 10px 10px 5px red,
+                        inset 10px 10px 5px #888888;
+        }
+
+        .box8{
+            box-shadow: 0 0 10px 4px  #FF6347,
+                        0 0 10px 30px #FFDAB9,
+                        30px 0 20px 30px #B0E0E6;
+        }
+
+        .box9{
+            box-shadow: inset 10px 10px 5px #888888,
+                        inset -10px -10px 5px #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">hor ver color</div>
+
+    <div class="box2">hor ver blur spread color</div>
+
+    <div class="box3">-hor -ver blur -spread color</div>
+
+    <div class="box4">hor ver blur color</div>
+
+    <div class="box5">hor ver</div> <!--default color of shadow is black-->
+
+    <div class="box6">inner shadow</div>
+
+    <div class="box7">inner and outer shadow</div>
+
+    <div class="box8">multiple layer shadow</div>
+
+    <div class="box9">inner full four side shadow</div>
+</body>
+</html>

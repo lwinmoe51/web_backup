@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basic</title>
+    
+
+</head>
+<body>
+    
+    <!--getting element by id -->
+    <h1>Getting element by id</h1>
+    <div id="demo">This is OLD id text.</div>
+    <script>
+        var elemById = document.getElementById("demo");
+        elemById.innerHTML = "This is NEW id text.";
+    </script>
+
+    <!-- ========================================================== -->
+    
+    <!-- getting element by class name .... it will return array -->
+    <h1>Getting element by class name</h1>
+    <h2 class="egClass">This is heading with egClass</h2>
+    <div>
+        <p class="egClass">This is paragraph with egClass inside div</p>
+    </div>
+    <p class="egClass">This is paragraph with egClasss outside</p>
+    <script>
+        var elemByClass = document.getElementsByClassName("egClass");
+        //that will change line by line
+        elemByClass[0].innerHTML = "New heaing with egClass - first element in array";
+        elemByClass[1].innerHTML = "New paragraph with egClass inside div - second element in array";
+        elemByClass[2].innerHTML = "New paragraph with egClass outside - third element in array";
+        //that will change all the same  -- to test this commnet above three line
+        // for(let x = 0; x<3; x++){
+        //     elemByClass[x].innerHTML = "all new content";
+        // }
+    </script>
+
+    <!-- ================================================= -->
+
+    <!-- getting element by tag name ... it will return array -->
+    <h1>Getting element by tag name</h1>
+    <h3>Old main heading</h3>
+    <h3>Old sub main heading</h3>
+    <div>
+        <h3>old heading in div</h3>
+        <span>old paragraph 1 in div</span><br>
+        <span>old paragraph 2 in div</span>
+    </div>
+    <div>this is old second div</div>
+    <script>
+        var elemByTagNameHeading = document.getElementsByTagName("h3");//there are three h3 tag 
+        elemByTagNameHeading[0].innerHTML = "New main heading";
+        elemByTagNameHeading[1].innerHTML = "New sub main heading";
+        elemByTagNameHeading[2].innerHTML = "New heading in div";
+
+        var elemByTagNameParag = document.getElementsByTagName("span"); //there are two p
+        elemByTagNameParag[0].innerHTML = "New paragraph 1 in div";
+        elemByTagNameParag[1].innerHTML = "New paragraph 2 in div";
+    </script>
+    
+    <!-- ====================================================== -->
+
+    <!-- getting element by Name - Name attribute -->
+    <h1>Getting element by name - name attribute</h1>
+    <p name="nameAttriValue">1. This is old getting element by name.</p>
+    <p name="nameAttriValue">2. This is old getting element by name.</p>
+    <p name="nameAttriValue">3. This is old getting element by name.</p>
+    <script>
+        let elemByName = document.getElementsByName("nameAttriValue"); //there are three same name attribute - it will return array
+        elemByName[0].innerHTML = "1. New element by name";
+        elemByName[1].innerHTML = "2. New element by name";
+        elemByName[2].innerHTML = "3. New element by name";
+    </script>
+    <!-- ====================================================== -->
+
+    <!-- changing style -->
+
+    <div id="demo1" style="width:200px; height:200px; padding:100px;">some text</div>
+    <script>
+        var x = document.getElementById("demo1");
+        x.style.color = "green";
+        x.style.backgroundColor = "pink";
+        x.style.width = "100px"
+    </script>
+    
+    <!-- ====================================================== -->
+
+    <!-- changing attributes -->
+
+    <img id="myimg" src="webimg.jpeg" alt="">
+    <script>
+        var imgElem = document.getElementById("myimg");
+        imgElem.src = "apple.jpeg";
+    </script>
+
+    <!-- ====================================================== -->
+    </script>
+
+</body>
+</html>

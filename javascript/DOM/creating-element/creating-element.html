@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creat element</title>
+</head>
+<body>
+    <!-- original list item -->
+    <ul id="menu">
+        <li>Home</li>
+    </ul>
+    <script>
+        // creat a new <div> element
+        let div = document.createElement('div');
+        //adding an id to div tag
+        div.id = 'content';
+        //adding a class to div
+        div.className = 'note';
+        //add html tag into div 
+        div.innerHTML = '<p>CreatElement example<p>';
+        //attch div to document in body
+        document.body.appendChild(div);
+        
+        //adding text to tag
+        let div2 = document.createElement('div');
+        div2.id = 'content2';
+        div2.className = 'note2';
+        //adding text to div2 
+        //u can use innerHTML to add text into div2 as above or
+        //creat a new text node and append it to the div2
+        //creat a new text node
+        let text = document.createTextNode('this is second text node');
+        div2.appendChild(text);
+        //add div2 to the document in body
+        document.body.appendChild(div2);
+
+        //adding an element to a div
+        let div3 = document.createElement('div');
+        div3.id = 'content3';
+        div3.className = 'note3';
+        //creat a new heading and add it to div3
+        let h2 = document.createElement('h2');
+        h2.textContent = 'Add h2 element to the div3';
+        div3.appendChild(h2);
+        //add div3 to the document
+        document.body.appendChild(div3);
+
+        //creating new list item li
+        const menu = document.querySelector("#menu");
+        //original list it in above in html section
+        //creat 'Product' li element
+        let li = document.createElement('li');
+        li.textContent = 'Product';
+        //using id as object without selecting 
+        menu.appendChild(li);
+        //creat 'About Us' li element
+        li = document.createElement('li');
+        li.textContent = 'About Us';
+        //this line should be here but it will not work for 
+        //second li 'About us' so i put above
+        //select the ul menu element
+        // const menu = document.querySelector("#menu");
+        menu.appendChild(li);
+
+        //creating a script element
+        //if u want to load a js file dynamically, use this
+        //let say we want to load lib.js file
+        //example 1
+        let script = document.createElement('script');
+        script.src = '/lib.js';
+        document.body.appendChild(script);
+
+        //example 2 | using helper function
+        function loadJS(url){
+            let script1 = document.createElement('script');
+            script1.src = url;
+            document.body.appendChild(script1);
+        }
+        loadJS('/lib.js');
+
+        //to load js file asynchronously
+        function loadJSAsync(url){
+            let script2 = document.createElement('script');
+            script2.src = url;
+            script2.async = true;
+            document.body.appendChild(script2);
+        }
+
+    </script>
+</body>
+</html>

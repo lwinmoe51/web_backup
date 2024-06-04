@@ -1,0 +1,94 @@
+.container{
+    margin: 0 auto;
+    padding: 1 20px 0 20px;
+    max-width: 900px;
+    background: yellow;
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    margin: 0 0 16px 0;
+    background: red;
+    text-align: center;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 24px;
+    margin: 0 0 16px 0;
+    text-align: center;
+    background: blue;
+
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin: 0 0 16px 0;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    background: #549DA0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #468486;
+}
+
+.feature{
+    margin: 0 auto;
+    padding: 1 20px 0 20px;
+    max-width: 900px;
+    background: black;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+.feature1,.feature2,.feature3{
+    margin: auto;
+}
+
+.quote_section{
+    margin: 0 auto;
+    padding: 1 20px 0 20px;
+    max-width: 900px;
+    background: red;
+    text-align: center;
+    color: white;
+}
+
+.q-cust{
+    border-radius: 150px;
+}
+
+.quote{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.cust{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    margin: 0 auto;
+    padding: 1 20px 0 20px;
+    max-width: 900px;
+    background: cyan;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul{
+    padding: 0 auto;
+}

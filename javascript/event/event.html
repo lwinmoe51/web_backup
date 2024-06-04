@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+
+    <script>
+        window.onload = function(){
+            alert('Welcome from event testing page');
+        }
+    </script>
+
+    <!-- event handler as html attribute -->
+    <button onclick="show()">Click Me</button>
+    <script>
+        function show(){
+            alert("Hi there");
+        }
+    </script>
+
+    <!-- event assign to element -->
+    <button id="demo">Demo button</button>
+    <script>
+        var x = document.getElementById("demo");
+        x.onclick = function(){
+            document.body.innerHTML = Date();
+        }
+    </script>
+
+    <!-- onchange event with text box -->
+    <input type="text" id="name" onchange="change()">
+    <script>
+        function change() {
+            var x = document.getElementById('name');
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+
+    <!-- using addEventListener() method -->
+    <button id="event">
+        hover or click this
+    </button>
+    <script>
+        var elem = document.getElementById('event');
+        elem.addEventListener("click", myFun); //don't put () after event handler call ...if u put, that will be a fun call
+        elem.addEventListener("mouseover", myFun);
+        function myFun(){
+            alert('You hovering or clicked on me!');
+        }
+    </script>
+
+    <!-- removing addEventListener -->
+    <button id="eventremove">Start</button>
+    <script>
+        var btn = document.getElementById("eventremove");
+        btn.addEventListener("click", myFunction);
+
+        function myFunction() {
+            alert(Math.random());
+            btn.removeEventListener("click", myFunction);
+        }
+    </script>
+
+    <!-- still not working  -->
+    <script>
+        window.onunload = function(){
+            alert("Thank u for testing out event page")
+        }
+    </script>
+</body>
+</html>

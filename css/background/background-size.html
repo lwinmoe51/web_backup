@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#example1 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#example2 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+}
+
+#example3 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#example4 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: 75% 50%;
+}
+
+#example5 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#example6 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#example7 {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(tree.png), url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+}
+</style>
+</head>
+<body>
+
+<h2>background-size: auto (default):</h2>
+<div id="example1">
+  <h2>Hello World</h2>
+  <p>The background image is displayed in its original size.</p>
+</div>
+
+<h2>background-size: 300px 100px:</h2>
+<div id="example2">
+  <h2>Hello World</h2>
+  <p>Here, the background image is set to 300px wide and 100px high.</p>
+</div>
+
+<h2>background-size: 100% 100%:</h2>
+<div id="example3">
+  <h2>Hello World</h2>
+  <p>The size of the background image is set in percent of the parent element; 100% width and 100% height.</p>
+</div>
+
+<h2>background-size: 75% 50%:</h2>
+<div id="example4">
+  <h2>Hello World</h2>
+  <p>The size of the background image is set in percent of the parent element; 75% width and 50% height.</p>
+</div>
+
+<h2>background-size: cover:</h2>
+<div id="example5">
+  <h2>Hello World</h2>
+  <p>The background image is resized to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges.</p>
+</div>
+
+<h2>background-size: contain:</h2>
+<div id="example6">
+  <h2>Hello World</h2>
+  <p>The background image is resized to make sure the image is fully visible.</p>
+</div>
+
+<h2>background-size: contain, cover:</h2>
+<div id="example7">
+  <h2>Hello World</h2>
+  <p>Here we have two background images. We specify the size of the first background image with "contain", and the second background-image with "cover".</p>
+</div>
+</body>
+</html>

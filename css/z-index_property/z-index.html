@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+
+    <style>
+        .blue{
+            background-color: blue;
+            margin-bottom: 15px;
+            width: 120px;
+            height: 120px;
+            color: white;
+            /*new line*/
+            z-index: 1;
+            position: relative; /*z-index work only on positioned elements*/
+        }
+
+        .red{
+            background-color: red;
+            width: 120px;
+            height: 120px;
+            color: white;
+            margin-top: -50px;
+            margin-left: 50px;
+            /*new line*/
+            z-index: 0;
+            position: relative; /*z-index work only on positioned elements*/
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="blue">Blue</div>
+    <div class="red">Red</div>
+</body>
+</html>

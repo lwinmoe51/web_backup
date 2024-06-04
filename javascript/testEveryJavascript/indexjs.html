@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Parent Element Example</title>
+</head>
+<body>
+    <div id="parent">
+        <p>Child element 1</p>
+        <p>Child element 2</p>
+    </div>
+    <button id="remove-button">Remove Parent</button>
+
+    <script>
+        document.getElementById('remove-button').addEventListener('click', function() {
+            const parentElement = document.getElementById('parent');
+            if (parentElement) {
+                parentElement.remove();
+            }
+        });
+    </script>
+</body>
+</html>

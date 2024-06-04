@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:absolute</title>
+
+    <style>
+        body{
+            width: 2000px;
+            height: 1000px;
+            background-color: black;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .normal_box{
+            background-color: blue;
+        }
+        .absolute_box{
+            background-color: green;
+            position:absolute;
+            right:10px;
+            top:0;
+        }
+        .normal2_box{
+            background-color: burlywood;
+        }
+
+        .parent{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+            left: 50%;
+        }
+
+        .child{
+            background-color: brown;
+            position: absolute;
+            left:50px;
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="normal_box">
+        Normal box
+    </div>
+    <div class="absolute_box">
+        Absolute box
+    </div>
+    <div class="normal2_box">
+        Normal2_box
+    </div>
+
+    <div class="parent">
+        parent
+        <div class="child">
+            child
+        </div>
+    </div>
+</body>
+</html>
