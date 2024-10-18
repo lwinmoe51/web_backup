@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    />
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      var today = new Date(); //get current date
-      var foundingDate = new Date(1970, 4, 1); // in JavaScript months are zero-based--so this is May 1 1970
-      var years = today.getFullYear() - foundingDate.getFullYear();
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smooth Navbar</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100">
+        <button
+            id="toggle-nav"
+            class="px-4 py-2 bg-blue-500 text-white rounded-md"
+        >
+            Toggle Navbar
+        </button>
+        <nav
+            id="navbar"
+            class="hidden fixed top-0 left-0 w-full bg-white shadow-lg transform -translate-y-full transition-transform duration-300"
+        >
+            <ul class="p-4">
+                <li class="mb-2"><a href="#" class="text-gray-700">Home</a></li>
+                <li class="mb-2">
+                    <a href="#" class="text-gray-700">About</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#" class="text-gray-700">Services</a>
+                </li>
+                <li><a href="#" class="text-gray-700">Contact</a></li>
+            </ul>
+        </nav>
+        <script>
+            const toggleButton = document.getElementById("toggle-nav");
+            const navbar = document.getElementById("navbar");
 
-      if (
-        today.getMonth() < foundingDate.getMonth() ||
-        (today.getMonth() === foundingDate.getMonth() &&
-          today.getDate() < foundingDate.getDate())
-      ) {
-        // if current day/month is prior to anniversary day/month, subtract 1
-        years--;
-      }
-
-      var anniversary = document.getElementById("anniversary");
-      anniversary.innerHTML = "We've been in business for " + years + " years.";
-    </script>
-    <h1 id="anniversary"></h1>
-  </body>
+            toggleButton.addEventListener("click", () => {
+                if (navbar.classList.contains("hidden")) {
+                    navbar.classList.remove("hidden");
+                    setTimeout(() => {
+                        navbar.classList.remove("-translate-y-full");
+                    }, 10);
+                } else {
+                    navbar.classList.add("-translate-y-full");
+                    navbar.addEventListener(
+                        "transitionend",
+                        () => {
+                            navbar.classList.add("hidden");
+                        },
+                        { once: true }
+                    );
+                }
+            });
+        </script>
+    </body>
 </html>
